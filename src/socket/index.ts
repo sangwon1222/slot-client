@@ -2,7 +2,6 @@ import { useSocketStore } from '@/store/socket';
 import { Socket, io } from 'socket.io-client';
 import { useChatStore } from '@/store/chat';
 import App from '@/app/app';
-import Test1 from '@/app/scene/test1';
 
 const isProduct = process.env.NODE_ENV === 'production';
 console.log(isProduct ? 'http://cuberoom.kr' : 'localhost:4000');
@@ -30,7 +29,6 @@ export class SocketIo {
 
     this.socket.on('income', ({ socketID, nickname, clientsCount }: TypeClientsCount) => {
       useChatStore.concurrentUsers = clientsCount;
-      (App.getHandle.getScene as Test1).inCome({ nickname, socketID });
     });
 
     this.socket.on('send-chat', ({ userID, chat, level }: { userID: string; chat: string; level: number }) => {
