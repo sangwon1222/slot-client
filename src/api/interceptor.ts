@@ -64,7 +64,7 @@ export function setInterceptors(apiClient: AxiosInstance): AxiosInstance {
       /** 원본요청 저장 */
       const originRequest = error.config;
       const instance = axios.create({
-        baseURL: import.meta.env?.PROD ? 'http://www.cuberoom.net/api' : 'http://http://211.169.91.131:4000/api',
+        baseURL: import.meta.env?.PROD ? 'http://www.cuberoom.net/api' : 'http://211.169.91.131:4000/api',
         headers: {
           Authorization: useAuthStore.accessToken,
           Refresh: useAuthStore.refreshToken,
