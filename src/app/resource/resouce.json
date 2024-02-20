@@ -1,0 +1,22 @@
+{
+    "common":{
+      "img":[
+        "chevron.png",
+        "tile.png",
+        "pos-icon.png",
+        "edit-tool-bg.png"
+      ]
+    },
+    "slot":{
+      "img":[
+        "icon.png",
+        "big_number.png",
+        "reel.png",
+        "main_frame.png"
+      ]
+    }
+
+  }
+  
+  
+  

@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply flex font-bold w-full ;
+    font-family: 'nanumgothic', sans-serif,"Malgun Gothic", "Nanum Gothic",Helvetica;
+    font-size: 16px;
+    letter-spacing: -0.08rem;
+  }
+  
+  #app{
+    @apply relative flex bg-white text-black w-full justify-center;
+    font-size:12px;
+  }
+}
+
+input{
+  @apply text-black border-2 rounded;
+  padding:10px;
+  &:focus {outline: none;}
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+.border-sparkle-play{
+  --borderWidth: 3px;
+  background: #1D1F20;
+  position: relative;
+  border-radius: var(--borderWidth);
+  &:after{
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    border-radius: calc(2 * var(--borderWidth));
+    background-size: 300% 300%;
+    z-index: -1;
+    @apply animate-sparkleBorder;
+  }
+}
+
+.use-before-tag{
+  @apply before:content-[''] before:block before:translate-x-1/3;
+  @apply before:h-[10px] before:w-[10px] before:border-transparent before:border-[10px];
+}
+
+*::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+*::-webkit-scrollbar-track {
+  @apply bg-slate-400;
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply bg-teal-800;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul li,
+ol li,
+li {
+  list-style: none;
+}
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+  outline: none;
+  background: none;
+  font-weight: 600;
+  box-shadow: none;
+  cursor: pointer;
+  letter-spacing: -0.05rem;
+}
+
+a {
+  color: #9feaf9;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover {
+  border-bottom: 1px solid;
+}
+
+
+
