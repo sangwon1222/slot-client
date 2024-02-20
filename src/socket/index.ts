@@ -4,13 +4,13 @@ import { useChatStore } from '@/store/chat';
 import App from '@/app/app';
 
 const isProduct = process.env.NODE_ENV === 'production';
-console.log(isProduct ? 'http://cuberoom.kr' : 'localhost:4000');
+console.log(isProduct ? 'http://cuberoom.kr' : 'http://211.169.91.131:4000');
 
 export class SocketIo {
   private socket: Socket;
 
   constructor() {
-    this.socket = io(isProduct ? 'http://cuberoom.kr' : 'localhost:4000', {
+    this.socket = io(isProduct ? 'http://cuberoom.kr' : 'http://211.169.91.131:4000', {
       withCredentials: isProduct,
       extraHeaders: { 'my-custom-header': 'abcd' },
     });
